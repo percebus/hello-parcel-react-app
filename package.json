@@ -1,0 +1,47 @@
+{
+  "name": "hello-parcel-react-app",
+  "version": "0.1.0",
+  "description": "My First React Parcel App",
+  "source": "src/index.html",
+  "scripts": {
+    "npm:install:global": "npm install --location=global yarn open-cli",
+    "setup": "npm run npm:install:global",
+    "test": "exit 0",
+    "parcel:default": "parcel",
+    "parcel:build": "parcel build",
+    "standard": "standard --fix src/**/*.js*",
+    "lint:js": "npm run standard",
+    "lint": "npm run lint:js",
+    "predist": "npm run lint",
+    "dist": "npm run parcel:build",
+    "browser": "open-cli http://localhost:1234",
+    "prestart": "npm run lint",
+    "start": "npm run parcel:default"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/percebus/hello-parcel-react-app.git"
+  },
+  "keywords": [
+    "hello-world",
+    "parcel",
+    "react",
+    "html",
+    "web"
+  ],
+  "author": "percebus",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/percebus/hello-parcel-react-app/issues"
+  },
+  "homepage": "https://github.com/percebus/hello-parcel-react-app#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "parcel": "latest",
+    "process": "^0.11.10",
+    "standard": "latest"
+  }
+}
