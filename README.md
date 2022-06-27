@@ -1,4 +1,4 @@
-# My First React Parcel App
+# My First Parcel React App
 
 ## Tips
 
