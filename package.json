@@ -6,17 +6,16 @@
   "scripts": {
     "npm:install:global": "npm install --location=global yarn open-cli",
     "setup": "npm run npm:install:global",
-    "test": "exit 0",
-    "parcel:default": "parcel",
-    "parcel:build": "parcel build",
-    "standard": "standard --fix src/**/*.js*",
+    "standard": "standard --fix src/**/*.jsx",
     "lint:js": "npm run standard",
     "lint": "npm run lint:js",
-    "predist": "npm run lint",
+    "preparcel": "npm run lint",
+    "parcel": "parcel",
+    "parcel:build": "npm run parcel -- build",
+    "test": "exit 0",
     "dist": "npm run parcel:build",
     "browser": "open-cli http://localhost:1234",
-    "prestart": "npm run lint",
-    "start": "npm run parcel:default"
+    "start": "npm run parcel" 
   },
   "repository": {
     "type": "git",
